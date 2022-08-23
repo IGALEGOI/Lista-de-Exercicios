@@ -1,2 +1,4 @@
-# Lista-de-Exercicios
- Exercícios da aula de Introdução Programação Estruturada
+# Lista de Exercícios
+ Lista de exercícios do curso de Introdução Programação Estruturada.
+
+ UNIP 2022
