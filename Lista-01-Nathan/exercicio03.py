@@ -14,12 +14,12 @@ def obterNota(entrada):
 
     while not ret:
 
-        if entrada == 1 or entrada == 2:
-            texto = "[NP" + str(entrada) + "]"
+        if entrada >= 1 and entrada <= 2:
+            texto = "da [NP" + str(entrada) + "]"
         else:
-            texto = "EXAME"
+            texto = "do EXAME"
 
-        nota    = float(input("Informe nota da " + texto + ": "))
+        nota    = float(input("Informe nota " + texto + ": "))
 
         ret = validaNota(nota)
 
@@ -66,7 +66,7 @@ while continua == "S" or continua == "s":
     media = (np1 + np2)/2
 
     textoSituacao = "O aluno "
-    textoSituacao += "ficou de EXAME!" if situacaoPadrao(media) == "EXAME!" else "foi " + str(situacaoPadrao(media))
+    textoSituacao += "ficou de EXAME! Com a média: " + str(media) if situacaoPadrao(media) == "EXAME!" else "foi "+ str(situacaoPadrao(media)) + " Com a média: " + str(media)
 
     print(textoSituacao)
 
@@ -75,8 +75,8 @@ while continua == "S" or continua == "s":
 
         mediaExame = (media + exame)/2
 
-        print("O aluno foi " + str(situacaoExame(mediaExame)))
+        print("O aluno foi " + str(situacaoExame(mediaExame)) + " Com a média: " + str(mediaExame))
 
-    continua = input("\nDeseja informar outro número? [S/N] ")
+    continua = input("\nDeseja informar outro número? [Digite S para continuar] ")
 
     clear()
